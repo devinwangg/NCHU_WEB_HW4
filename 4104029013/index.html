@@ -14,7 +14,7 @@
             background: gray;
         }
 
-        #format {
+        div.format {
             border-style: solid;
         }
 
@@ -74,17 +74,17 @@
     <script language="JavaScript">
         $(document).ready(function() {
             $('p.more1').hide();
-            $('a.short1').hide();
-            $('a.more1').click(function() {
+            $('p.short1').hide();
+            $('p.more').click(function() {
                 $('p.more1').show();
                 $(this).hide();
-                $('a.more1').hide();
-                $('a.short1').show();
+                $('p.more').hide();
+                $('p.short1').show();
                 return false;
             });
-            $('a.short1').click(function() {
+            $('p.short1').click(function() {
                 $('p.more1').hide('500');
-                $('a.more1').show();
+                $('p.more').show();
                 $(this).hide();
                 return false;
             });
@@ -128,25 +128,38 @@
                 $('#about form').slideToggle('5000');
             });
 
-            $('iframe.more2').hide();
-            $('a.more2').click(function() {
+            $('p.a').hide();
+            $('p.b').hide();
+            $('p.c').hide();
+            $('p.d').hide();
+            $('p.e').hide();
+            $('p.f').hide();
+            $('#story').hide();
+            $('p.1').click(function() {
+                $('p.a').toggle('slow');
+            });
+            $('p.2').click(function() {
+                $('p.b').toggle('slow');
+            });
+            $('p.3').click(function() {
+                $('p.c').toggle('slow');
+            });
+            $('p.4').click(function() {
+                $('p.e').toggle('slow');
+            });
+            $('p.5').click(function() {
+                $('p.f').toggle('slow');
+            });
+            $('p.6').click(function() {
                 $('iframe.more2').toggle('slow');
-                if ($(this).text() == '點開影片')
-                    $(this).text('隱藏影片');
-                else
-                    $(this).text('點開影片');
-                return false;
+            });
+            $('#format').click(function() {
+                $('#story').toggle('slow');
             });
 
-            $('a.more2').mouseenter(function() {
-                $('a.more2').addClass('large');
-            });
-            $('a.more2').mouseleave(function() {
-                $('a.more2').removeClass('large');
-            });
 
             $('div.more3').hide();
-            $('a.more3').click(function() {
+            $('#more3').click(function() {
                 if ($('div.more3').is(':hidden'))
                     $('div.more3').slideDown('fast');
                 else
@@ -154,67 +167,35 @@
                 return false;
             });
 
-
-            $('a.more3').mouseenter(function() {
-                $('a.more3').addClass('large');
-            });
-            $('a.more3').mouseleave(function() {
-                $('a.more3').removeClass('large');
-            });
-
-
             $('a.downloadg').hide();
             $('a.downloada').hide();
-            $('a.short4').hide();
-            $('a.more4').click(function() {
+            $('#cancel').hide();
+            $('#download').click(function() {
                 $('a.downloadg').fadeIn('2000');
                 $('a.downloada').fadeIn('5000');
-                $(this).hide();
-                $('a.short4').show();
-                return false;
+                $('#download').hide();
+                $('#cancel').show();
             });
-            $('a.short4').click(function() {
+            $('#cancel').click(function() {
                 $('a.downloadg').fadeOut('1000');
                 $('a.downloada').fadeOut('3000');
-                $('a.more4').show();
-                $(this).hide();
-                return false;
-            });
-
-
-
-            $('a.more4').mouseenter(function() {
-                $('a.more4').addClass('large');
-            });
-            $('a.more4').mouseleave(function() {
-                $('a.more4').removeClass('large');
-            });
-
-            $('a.short4').mouseenter(function() {
-                $('a.short4').addClass('large');
-            });
-            $('a.short4').mouseleave(function() {
-                $('a.short4').removeClass('large');
+                $('#download').show();
+                $('#cancel').hide();
             });
 
             $('a.data').hide();
             $('a.tos').hide();
             $('w').hide();
-            $('a.toggle1').click(function() {
+            $('#toggle1').click(function() {
                 $('a.data').fadeToggle('1500');
                 $('a.tos').fadeToggle('1500');
                 $('w').fadeToggle('1500');
                 return false;
             });
 
-            $('a.toggle1').mouseenter(function() {
-                $('a.toggle1').addClass('large');
-            });
-            $('a.toggle1').mouseleave(function() {
-                $('a.toggle1').removeClass('large');
-            });
 
-            $("#a").click(function() {
+
+            $("#pic").click(function() {
                 $(this).fadeTo("fast", Math.random());
             });
         });
@@ -222,28 +203,32 @@
 </head>
 
 <body background="http://towerofsaviorshack.w-er.com/wp-content/uploads/2014/08/Tower-of-Saviors-Hack-Background.jpg">
-    <embed src="神魔之塔×大富翁 Tower of Saviors × Richman 12.2 路 Battle BGM 加長版 Long Edit.mp3" volume="0" autostart="false" hidden="true" />
+    <embed src="神魔之塔×大富翁 Tower of Saviors × Richman 12.2 路 Battle BGM 加長版 Long Edit.mp3" volume="100" autostart="false" hidden="true" />
 
     <h1 align="center" class="format">神魔之塔 Tower Of Savior</h1>
 
-    <h1 id="a" align="center"><img src="https://upload.wikimedia.org/wikipedia/zh/0/0b/Tower_of_Saviors.png" height="100" width="100" align="center"></h2>
+    <h1 id="pic" align="center"><img src="https://upload.wikimedia.org/wikipedia/zh/0/0b/Tower_of_Saviors.png" height="100" width="100" align="center"></h2>
 
-    <div id="backgorund">
-        <h2><a href="#" class="more1">介紹</a></h2>
-        <h2><a href="#" class="short1">隱藏介紹</a><h2>
+      <h2><p class="more" style="font-style: italic; border-style:double;">介紹</p></h2>
+      <h2><p class="short1"  style="font-style: italic; border-style:ridge;">隱藏介紹</p></h2>
+    <div>
         <p class="more1">
             （英語：Tower of Saviors）是由香港手機遊戲公司Madhead開發出的一款轉珠遊戲，分為正體中文及英文版兩個版本。<br> 並以世界各地的神話、傳奇、童話作為卡片的參考範本。
             <br> 從遊戲中關卡故事、潛能解放故事、昇華故事及卡片故事等，可見出不同召喚獸互相關連，亦為遊戲演化推進的一大關鍵。
+              <iframe align="center" width="560" height="315" src="https://www.youtube.com/embed/3lRjNbqrvN8" frameborder="0" allowfullscreen></iframe>
         </p>
+
+
     </div>
-    <div id="format">
-        <h2 class="format">遊戲內容</h2>
+    <h2 class="format" style="border-style:double;">遊戲內容</h2>
+    <div class="format">
+
         <div id="stone">
             <p id="open">符石</p>
             <form>
                 <p>遊戲有六種符石，分別為水、火、木、光、暗及心符石。 除以特殊卡片做為隊長之外，將符石以直排或橫排的方式連成3顆或以上即可消除。 消除符石可使相應屬性的召喚獸作出攻擊或回復血量，消除符石形成combo可增加攻擊。 消除5顆或以上的符石會自動產生一顆強化符石，該符石的攻擊比一般符石高或可破除特殊盾牌。
                 </p>
-                <img src="http://static2.ithome.com.tw/uploads/image-upload/516e7533ebf24.png"/>
+                <img src="http://i.imgur.com/v5jkTVj.gif"/>
             </form>
         </div>
         <div id="monster">
@@ -260,20 +245,73 @@
                 </p>
             </form>
         </div>
-
-
-        <div>
-            <h2 class="format">影片</h2>
-            <iframe class="more2" width="560" height="315" src="https://www.youtube.com/embed/3lRjNbqrvN8" frameborder="0" allowfullscreen></iframe>
-            <a href="#" class="more2">點開影片</a>
         </div>
 
+            <h2 id="format" class="format" style="border-style:double;">故事主軸</h2>
+        <div>
+          <form id="story">
+            <p align="center">祂們是水，軀幹如同漩渦<br>
+               祂們是火，鱗片擊出焰芒<br>
+               祂們是木，肢體連繫森林<br>
+               祂們是光，輝煌在展望<br>
+               祂們是暗，終焉裡等待
+            </p>
+            <p class="1" id="open" align="center">渾沌紀元</p>
+            <p class="a" align="center">
+               以流傳的碑文來推斷，異界龍的真身——<br>
+               古龍創造人界並在其中休息，生命因而開始<br>
+               誕生。海洋孕育出獸族，古龍的遺鱗變<br>
+               化成蜥蜴人。後來，遠古神族發現了人<br>
+               界，祂們為了搜集古龍之力而干預人界的<br>
+               生命，人類亦從中誕生。後來古神為爭奪<br>
+               古龍之力而分裂成神魔兩族，更因未知的<br>
+               原因而離開人界……
+             </p>
+            <p class="2" id="open2" align="center">魔導紀元</p>
+            <p class="b" align="center">人類逐漸發展出文明，文獻記載中，重臨<br>
+               的神族派使者來到人間，祂們搜索魔族，<br>
+               並授命要指引人們，但祂們卻為了私慾而<br>
+               擾亂人間。人類在神族教導下得到符紋的<br>
+               力量，他們以其興建以諾塔，並造出巨像<br>
+                       作為塔的守護者和支柱……<br>
+             </p>
+            <p class="3" id="open3" align="center">英雄時代</p>
+            <p class="c" align="center">神魔兩族都借人類來增強勢力，人們漸變<br>
+               強大。魔族借以諾塔入侵神界，為阻止魔<br>
+               族，神族摧毀以諾塔並自此封絕起來。<br>
+            </p>
+            <p class="4" id="open" align="center">英靈時代</p>
+            <p class="d" align="center">北域部族聯合起來對抗魔族，強大的奧丁<br>
+               率眾首組成軍團，他將碑紋中的力量分予<br>
+               戰士們，強大的眾將被後人稱頌為神。在<br>
+               遙遠的東方，妖精們與牛魔王亦展開大<br>
+               戰。神魔兩族的戰鬥此起彼落，戰爭與和<br>
+                       平因而循環不斷……<br>
+            </p>
+            <p class="5" id="open2" align="center">黑鐵時代</p>
+            <p class="e" align="center" >魔族為打開封印而攻佔以諾塔，英雄們唯<br>
+               有犧牲自身與符石融合來加強封印。大法<br>
+               師召來古神的化身、做出龍使企圖操控祂<br>
+               們，最後以失敗告終。學者開始鑽研神龍<br>
+               之力並利用它來改造自身去對抗搶奪神龍<br>
+                         結晶的魔族。<br>
+            </p>
+            <p class="6" id="open3" align="center">召喚時代</p>
+            <p class="f" align="center">世界正一步步走向滅亡，為了阻止末日的<br>
+              到來，人類必須想辦法登上塔頂以尋求神<br>
+              族的救助。為了戰勝塔中的封王，人類借<br>
+              用昔日英靈們的力量，被寄予希望的「召<br>
+                   喚師」展開了漫長的旅程……<br>
+            </p>
+          </form>
+        </div>
+<div class="format">
 
         <div id="open">
-            <h2 class="format">商業代言與合作</h2>
+<h2 id="more3">商業代言與合作</h2>
             <br/>
-            <a href="#" class="more3">點開</a>
-            <div class="more3"><font  face="monospace" >
+
+            <div class="more3">
                 <p>2013年7月邀請陳妍希成為代言人，並與之進行合作。</p>
                 <p>2015年1月9日宣布與台灣大宇資訊合作，將《軒轅劍》系列帶進神魔世界。</p>
                 <p>2015年4月23日宣布和臺版《怪物彈珠》合作，將部分日本神話角色如建速須佐之男命、月讀、伊邪那美等帶入神魔之塔。</p>
@@ -282,46 +320,45 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/jZHqKAcmFh8" frameborder="0" allowfullscreen></iframe>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/v_LiVrSjvAk" frameborder="0" allowfullscreen></iframe>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/sex13tdittQ" frameborder="0" allowfullscreen></iframe>
-              </font>
             </div>
         </div>
 
         <div id="open2">
-            <h2 class="format">下載</h2>
+            <h2 class="format" id="download">下載</h2>
+            <h2 class="format" id="cancel">取消</h2>
             <a class="downloadg" href="https://play.google.com/store/apps/details?id=com.madhead.tos.zh&hl=zh_TW"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Get_it_on_Google_play.svg/2000px-Get_it_on_Google_play.svg.png" width="150" height="50"/></a><br>
             <a class="downloada" href="https://itunes.apple.com/tw/app/%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94/id583798880?l=zh&mt=8"><img src="https://www.headspace.com/bundles/headspacesite/images/v2/buy/stores/apple-store.png" width="200" height="50"/></a>
 
-            <br><a href="#" class="more4">更多內容</a>
-            <br><a href="#" class="short4">隱藏內容</a>
+
         </div>
 
         <div id="open3">
-            <h2 class="format">參考資料</h2>
-            <a class="tos" href="http://www.towerofsaviors.com/zh/index.php">《神魔之塔》官方網站</a>
+            <h2 class="format" id="toggle1">參考資料</h2>
+            <a class="tos" href="http://www.towerofsaviors.com/zh/index.php">《神魔之塔》官方網站</a><br>
             <a class="data" href="https://zh.wikipedia.org/wiki/%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94#.E5.95.86.E6.A5.AD.E4.BB.A3.E8.A8.80.E8.88.87.E7.95.B0.E6.A5.AD.E5.90.88.E4.BD.9C">神魔之塔wiki</a><br>
-
-            <br><w>http://www.towerofsaviors.com/zh/index.php
-            <br>https://zh.wikipedia.org/wiki/%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94#.E5.95.86.E6.A5.AD.E4.BB.A3.E8.A8.80.E8.88.87.E7.95.B0.E6.A5.AD.E5.90.88.E4.BD.9C
-            <br>https://itunes.apple.com/tw/app/%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94/id583798880?l=zh&mt=8
-            <br>https://play.google.com/store/apps/details?id=com.madhead.tos.zh&hl=zh_TW
-            <br>https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Get_it_on_Google_play.svg/2000px-Get_it_on_Google_play.svg.png
-            <br>https://www.headspace.com/bundles/headspacesite/images/v2/buy/stores/apple-store.png
-            <br>https://www.youtube.com/embed/sWxOJpiURcM
-            <br>https://www.youtube.com/embed/jZHqKAcmFh8
-            <br>https://www.youtube.com/embed/v_LiVrSjvAk
-            <br>https://www.youtube.com/embed/sex13tdittQ
-            <br>https://www.youtube.com/embed/3lRjNbqrvN8
-            <br>http://static2.ithome.com.tw/uploads/image-upload/516e7533ebf24.png</w>
-            <a href="#" class="toggle1">顯示內容</a>
+            <w>
+            <a class="data" href="http://www.towerofsaviors.com/zh/index.php">http://www.towerofsaviors.com/zh/index.php</a><br>
+            <a class="data" href="https://zh.wikipedia.org/wiki/%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94#.E5.95.86.E6.A5.AD.E4.BB.A3.E8.A8.80.E8.88.87.E7.95.B0.E6.A5.AD.E5.90.88.E4.BD.9C">https://zh.wikipedia.org/wiki/%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94#.E5.95.86.E6.A5.AD.E4.BB.A3.E8.A8.80.E8.88.87.E7.95.B0.E6.A5.AD.E5.90.88.E4.BD.9C</a><br>
+            <a class="data" href="https://itunes.apple.com/tw/app/%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94/id583798880?l=zh&mt=8">https://itunes.apple.com/tw/app/%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94/id583798880?l=zh&mt=8</a><br>
+            <a class="data" href="https://play.google.com/store/apps/details?id=com.madhead.tos.zh&hl=zh_TW">https://play.google.com/store/apps/details?id=com.madhead.tos.zh&hl=zh_TW</a><br>
+            <a class="data" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Get_it_on_Google_play.svg/2000px-Get_it_on_Google_play.svg.png">https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Get_it_on_Google_play.svg/2000px-Get_it_on_Google_play.svg.png</a><br>
+            <a class="data" href="https://www.headspace.com/bundles/headspacesite/images/v2/buy/stores/apple-store.p">https://www.headspace.com/bundles/headspacesite/images/v2/buy/stores/apple-store.p</a><br>
+            <a class="data" href="https://www.youtube.com/embed/sWxOJpiURcM">https://www.youtube.com/embed/sWxOJpiURcM</a><br>
+            <a class="data" href="https://www.youtube.com/embed/jZHqKAcmFh8">https://www.youtube.com/embed/jZHqKAcmFh8</a><br>
+            <a class="data" href="https://www.youtube.com/embed/v_LiVrSjvAk">https://www.youtube.com/embed/v_LiVrSjvAk</a><br>
+            <a class="data" href="https://www.youtube.com/embed/sex13tdittQ">https://www.youtube.com/embed/sex13tdittQ</a><br>
+            <a class="data" href="https://www.youtube.com/embed/3lRjNbqrvN8">https://www.youtube.com/embed/3lRjNbqrvN8</a><br>
+            <a class="data" href="http://static2.ithome.com.tw/uploads/image-upload/516e7533ebf24.png">http://static2.ithome.com.tw/uploads/image-upload/516e7533ebf24.png</a><br>
+            </w>
 
         </div>
 
         <div>
-            <h2><a class="about" href="about.html"size="6">About This Page</a></h2>
+            <h2><a class="about" href="about.html"size="6" style="border-style:double;">About This Page</a></h2>
         </div>
 
-    </div>
 
+</div>
 
 </body>
 
