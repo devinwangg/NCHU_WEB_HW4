@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8";>
+		<title>表單練習</title>
+		<style>
+			table {
+				border-style:solid;
+				border-width:3px;
+				border-color:#0000FF;
+				border:2;
+			}
+		</style>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body background="bac3.jpg">
+		<br>
+		<p id="style1">請輸入</p><br>
+		<form action="" method="get" name="form1">
+			姓名：<input type='text' name="username"><br>
+			生日：<input type='text' name="birthday" placeholder="1997/01/01"><br>
+			性別：男<input type="radio" name="sex" value="男">女<input type="radio" name="sex" value="女"><br>
+			興趣：<input type='text' name="hobby"><br>
+			自傳：<textarea name="note"></textarea>
+			<input type="button" value="送出" onclick="postData()" />
+		</form>
+		
+		
+		<table border>
+			<tr>
+				<td>姓名</td>
+				<td id="output1"></td>
+			</tr>
+			<tr>
+				<td>生日</td>
+				<td id="output2"></td>
+
+			<tr>
+				<td>性別</td>
+				<td id="output3"></td>
+			</tr>
+			<tr>
+				<td>興趣</td>
+				<td id="output4"></td>
+			</tr>
+			<tr>
+				<td>自傳</td>
+				<td id="output5"></td>
+			</tr>
+		</table>
+		
+		
+		
+		<script>
+			function postData(){
+				var username = document.form1.username.value;
+				var birthday = document.form1.birthday.value;
+				var sex = document.form1.sex.value;
+				var hobby = document.form1.hobby.value;
+				var note = document.form1.note.value;
+				var addall = "姓名:"+username+"\n生日:"+birthday+"\n性別:"+sex+"\n興趣:"+hobby+"\n自傳:"+note+"\n履歷表儲存成功";
+				alert(addall);
+				document.getElementById("output1").innerHTML = username;
+				document.getElementById("output2").innerHTML = birthday;
+				document.getElementById("output3").innerHTML = sex;
+				document.getElementById("output4").innerHTML = hobby;
+				document.getElementById("output5").innerHTML = note;
+			}
+		</script>
+		<br>
+		<a id="style1" href = "..\index.html">回到自傳</a>
+	</body>
+</html>

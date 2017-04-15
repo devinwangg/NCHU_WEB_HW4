@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8";>
+		<title>3/21 表單練習</title>
+		<style>
+			table {
+				border-style:solid;
+				border-width:3px;
+				border-color:#0000FF;
+				border:2;
+
+
+				//background-color: SlateGray;
+				//margin-top: auto;
+				//margin-left: auto;
+				//margin-right: auto;
+				//margin-bottom: auto;
+
+				padding-top: auto;
+				padding-left: auto;
+				padding-right: auto;
+				padding-bottom: auto;
+			}
+		</style>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body background="bac3.jpg">
+		<br>
+		<p id="style1">請輸入</p><br>
+		<form action="" method="get" name="form1">
+			姓名：<input type='text' name="username"><br>
+			生日：<input type='text' name="birthday" placeholder="1997/01/01"><br>
+			性別：男<input type="radio" name="sex" value="男">女<input type="radio" name="sex" value="女"><br>
+			興趣：<input type='text' name="hobby"><br>
+			自傳：<textarea name="note"></textarea>
+			<input type="button" value="送出" onclick="postData()" />
+		</form>
+
+		<div id="a">
+		</div>
+
+		<script>
+			function postData(){
+				var username = document.form1.username.value;
+				var birthday = document.form1.birthday.value;
+				var sex = document.form1.sex.value;
+				var hobby = document.form1.hobby.value;
+				var note = document.form1.note.value;
+
+
+				var objNode = document.getElementById("a");
+				var tableform = document.createElement("table");
+				var tr = document.createElement("tr");
+				var th = document.createElement("th");
+				var th2 = document.createElement("th");
+				var th3 = document.createElement("th");
+				var th4 = document.createElement("th");
+				var th5 = document.createElement("th");
+				var strText = "姓名";
+				var objTextNode = document.createTextNode(strText);
+				var strText2 = "生日";
+				var objTextNode2 = document.createTextNode(strText2);
+				var strText3 = "性別";
+				var objTextNode3 = document.createTextNode(strText3);
+				var strText4 = "興趣";
+				var objTextNode4 = document.createTextNode(strText4);
+				var strText5 = "自傳";
+				var objTextNode5 = document.createTextNode(strText5);
+
+				objNode.appendChild(tableform);
+				tableform.appendChild(tr);
+				tr.appendChild(th);
+				tr.appendChild(th2);
+				tr.appendChild(th3);
+				tr.appendChild(th4);
+				tr.appendChild(th5);
+				th.appendChild(objTextNode);
+				th2.appendChild(objTextNode2);
+				th3.appendChild(objTextNode3);
+				th4.appendChild(objTextNode4);
+				th5.appendChild(objTextNode5);
+
+				var tr2 = document.createElement("tr");
+				var td = document.createElement("td");
+				var td2 = document.createElement("td");
+				var td3 = document.createElement("td");
+				var td4 = document.createElement("td");
+				var td5 = document.createElement("td");
+
+				var objTextNode6 = document.createTextNode(username);
+				var objTextNode7 = document.createTextNode(birthday);
+				var objTextNode8 = document.createTextNode(sex);
+				var objTextNode9 = document.createTextNode(hobby);
+				var objTextNode10 = document.createTextNode(note);
+
+				tableform.appendChild(tr2);
+				tr2.appendChild(td);
+				tr2.appendChild(td2);
+				tr2.appendChild(td3);
+				tr2.appendChild(td4);
+				tr2.appendChild(td5);
+				td.appendChild(objTextNode6);
+				td2.appendChild(objTextNode7);
+				td3.appendChild(objTextNode8);
+				td4.appendChild(objTextNode9);
+				td5.appendChild(objTextNode10);
+
+				tableform.setAttribute("border","2");
+
+			}
+		</script>
+		<br>
+		<a id="style1" href = "..\index.html">回到自傳</a>
+	</body>
+</html>

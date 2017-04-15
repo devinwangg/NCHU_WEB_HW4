@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8";>
+		<title>表單練習</title>
+		<style>
+			table {
+				border-style:solid;
+				border-width:3px;
+				border-color:#0000FF;
+				border:2;
+			}
+		</style>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body background="bac3.jpg">
+		<br>
+		<p id="style1">請輸入</p><br>
+		<form action="" method="get" name="form1">
+			姓名：<input type='text' name="username"><br>
+			生日：<input type='text' name="birthday" placeholder="1997/01/01"><br>
+			性別：男<input type="radio" name="sex" value="男">女<input type="radio" name="sex" value="女"><br>
+			興趣：<input type='text' name="hobby"><br>
+			自傳：<textarea name="note"></textarea>
+			<input type="button" value="送出" onclick="postData()" />
+		</form>
+		<p id="output"></p>
+		
+		<script>
+			function postData(){
+				var output = document.getElementById("output");
+				var username = document.form1.username.value;
+				var birthday = document.form1.birthday.value;
+				var sex = document.form1.sex.value;
+				var hobby = document.form1.hobby.value;
+				var note = document.form1.note.value;
+				var addall = "姓名:"+username+"\n生日:"+birthday+"\n性別:"+sex+"\n興趣:"+hobby+"\n自傳:"+note+"\n履歷表儲存成功";
+				alert(addall);
+				output.innerHTML = "<table border>"+
+				"<tr>"+
+				"<th>"+"姓名"+"</th>"+
+				"<th>"+username+"</th>"+
+				"</tr>"+
+				"<tr>"+
+				"<th>"+"生日"+"</th>"+
+				"<th>"+birthday+"</th>"+
+				"</tr>"+
+				"<tr>"+
+				"<th>"+"性別"+"</th>"+
+				"<th>"+sex+"</th>"+
+				"</tr>"+
+				"<tr>"+
+				"<th>"+"興趣"+"</th>"+
+				"<th>"+hobby+"</th>"+
+				"</tr>"+
+				"<tr>"+
+				"<th>"+"自傳"+"</th>"+
+				"<th>"+note+"</th>"+
+				"</tr>"+
+				"</table>";
+				
+				
+			}
+		</script>
+		<br>
+		<a id="style1" href = "..\index.html">回到自傳</a>
+	</body>
+</html>
