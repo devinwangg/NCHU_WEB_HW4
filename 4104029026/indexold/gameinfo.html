@@ -1,0 +1,471 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>tos info</title>
+    <script src="../assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <style>
+        body {
+            background-image: url("images/lag.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        h2 {
+            color: red;
+            font-size: 33px;
+            font-style: oblique;
+        }
+
+        h3 {
+            color: black;
+            font-size: 26px;
+        }
+
+        span {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        table {
+            border-style: solid;
+            border-width: 3px;
+            border-color: #0000FF;
+            border: 2;
+        }
+
+        th,
+        tr,
+        td {
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        ul,
+        li {
+            color: black;
+            font-size: 22px;
+        }
+
+        #mm {
+            float: right;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('#map').click(function() {
+                $("#mappic").fadeIn();
+                $("#closemap").fadeIn();
+            });
+        });
+
+        $(document).ready(function() {
+            $('#closemap').click(function() {
+                $("#mappic").fadeOut();
+                $("#closemap").fadeOut();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $("#atk").click(function() {
+                $("#formula").slideToggle("slow");
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $("#cri").click(function() {
+                $("#criAtk").slideToggle("slow");
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $("#crystal").click(function() {
+                $("#redgem").toggle("slow");
+                $("#bluegem").toggle("slow");
+                $("#yellowgem").toggle("slow");
+                $("#greengem").toggle("slow");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#redgem").click(function() {
+                $("#redta").show("slow");
+                $("#closeta").show("slow");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#bluegem").click(function() {
+                $("#blueta").show("slow");
+                $("#closeta").show("slow");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#yellowgem").click(function() {
+                $("#yellowta").show("slow");
+                $("#closeta").show("slow");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#greengem").click(function() {
+                $("#greenta").show("slow");
+                $("#closeta").show("slow");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#closeta").click(function() {
+                $("#redta").hide("slow");
+                $("#blueta").hide("slow");
+                $("#yellowta").hide("slow");
+                $("#greenta").hide("slow");
+                $("#closeta").hide("slow");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#rank").click(function() {
+                $("#ooo").slideDown("slow");
+                $("#two").slideDown("slow");
+                $("#three").slideDown("slow");
+                $("#four").slideDown("slow");
+                $("#closerank").slideDown("slow");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#closerank").click(function() {
+                $("#ooo").slideUp("slow");
+                $("#two").slideUp("slow");
+                $("#three").slideUp("slow");
+                $("#four").slideUp("slow");
+                $("#closerank").slideUp("slow");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#ooo").click(function() {
+                $("#ooocon").fadeToggle("slow");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#two").click(function() {
+                $("#twocon").fadeToggle("slow");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#three").click(function() {
+                $("#threecon").fadeToggle("slow");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#four").click(function() {
+                $("#fourcon").fadeToggle("slow");
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $("#mm").fadeTo("slow", 0.45);
+        });
+
+        $(document).ready(function() {
+            $("#mm").mouseenter(function() {
+                $(this).fadeTo("slow", 0.9);
+            })
+            $("#mm").mouseleave(function() {
+                $(this).fadeTo("slow", 0.45);
+            });
+        });
+    </script>
+
+</head>
+
+<body class="landing">
+    <header id="header" class="alt">
+        <h1 id="ab"><strong><a href="about.html">about</a></strong></h1>
+        <nav>
+            <ul>
+                <li><strong><a href="../index.html">回主頁</a></strong></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="one" class="wrapper style1">
+        <div align="center">
+            <br><br>
+            <h1 style="color:black;font-size:40px" ;>tos information</h1>
+        </div>
+        <br>
+        <div align="center">
+            <h2 id="map">tos世界地圖</h2>
+            <br>
+            <img src="images/worldmap.jpg" style="width:800px;height:1500px;display:none;" id="mappic">
+            <h2 id="closemap" style="display:none">收起地圖</h2>
+        </div>
+        <div align="center">
+            <h2 id="atk">傷害公式</h2>
+            <h3 id="formula" style="display:none">{ [ (面板攻擊＋技能威力＋魔法增幅) ×基礎增幅 －
+              (敵方防禦－防禦減益) ×等級懲罰 ＋屬性抵抗 ] ×爆擊增幅
+              ＋爆擊增傷＋屬性增傷＋類型增傷 } ×技能增幅×相剋增幅×目標增幅×特性增幅 ＋附加傷害
+            </h3>
+        </div>
+        <div align="center">
+            <h2 id="cri">爆擊傷害公式</h2>
+            <h3 id="criAtk" style="display:none">
+              (人物暴擊 + 技能加成 - 目標暴擊抗性) *42 /人物等級
+            </h3>
+        </div>
+
+        <div align="center" id="gem">
+            <h2 id="crystal">寶石能力</h2>
+            <span id="redgem" style="display:none">紅寶石</span>
+            <span id="bluegem" style="display:none">藍寶石</span>
+            <span id="yellowgem" style="display:none">黃寶石</span>
+            <span id="greengem" style="display:none">綠寶石</span>
+            <table id="redta" style="display:none">
+                <tr>
+                    <th></th>
+                    <th>紅寶石等級</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                </tr>
+                <tr>
+                    <td>武器</td>
+                    <td>最大攻擊力</td>
+                    <td>180</td>
+                    <td>240</td>
+                    <td>310</td>
+                </tr>
+                <tr>
+                    <td>副手</td>
+                    <td>物理攻擊力</td>
+                    <td>110</td>
+                    <td>145</td>
+                    <td>185</td>
+                </tr>
+                <tr>
+                    <td>衣褲</td>
+                    <td>hp</td>
+                    <td>789</td>
+                    <td>1080</td>
+                    <td>1419</td>
+                </tr>
+                <tr>
+                    <td>手套</td>
+                    <td>爆擊傷害</td>
+                    <td>23</td>
+                    <td>30</td>
+                    <td>39</td>
+                </tr>
+                <tr>
+                    <td>鞋子</td>
+                    <td>hp回復力</td>
+                    <td>22</td>
+                    <td>32</td>
+                    <td>44</td>
+                </tr>
+            </table>
+
+            <table id="blueta" style="display:none">
+                <tr>
+                    <th></th>
+                    <th>藍寶石等級</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                </tr>
+                <tr>
+                    <td>武器</td>
+                    <td>魔法攻擊力</td>
+                    <td>86</td>
+                    <td>113</td>
+                    <td>144</td>
+                </tr>
+                <tr>
+                    <td>副手</td>
+                    <td>格檔</td>
+                    <td>30</td>
+                    <td>44</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>衣褲</td>
+                    <td>sp</td>
+                    <td>138</td>
+                    <td>180</td>
+                    <td>228</td>
+                </tr>
+                <tr>
+                    <td>手套</td>
+                    <td>sp回復力</td>
+                    <td>22</td>
+                    <td>21</td>
+                    <td>44</td>
+                </tr>
+                <tr>
+                    <td>鞋子</td>
+                    <td>魔法防禦力</td>
+                    <td>50</td>
+                    <td>60</td>
+                    <td>70</td>
+                </tr>
+            </table>
+
+            <table id="yellowta" style="display:none">
+                <tr>
+                    <th></th>
+                    <th>黃寶石等級</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                </tr>
+                <tr>
+                    <td>武器</td>
+                    <td>爆擊傷害</td>
+                    <td>270</td>
+                    <td>360</td>
+                    <td>470</td>
+                </tr>
+                <tr>
+                    <td>副手</td>
+                    <td>爆擊傷害</td>
+                    <td>145</td>
+                    <td>195</td>
+                    <td>245</td>
+                </tr>
+                <tr>
+                    <td>衣褲</td>
+                    <td>物理防禦力</td>
+                    <td>50</td>
+                    <td>60</td>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <td>手套</td>
+                    <td>格檔貫穿</td>
+                    <td>30</td>
+                    <td>44</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>鞋子</td>
+                    <td>hp</td>
+                    <td>525</td>
+                    <td>720</td>
+                    <td>945</td>
+                </tr>
+            </table>
+
+            <table id="greenta" style="display:none">
+                <tr>
+                    <th></th>
+                    <th>綠寶石等級</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                </tr>
+                <tr>
+                    <td>武器</td>
+                    <td>爆擊</td>
+                    <td>26</td>
+                    <td>38</td>
+                    <td>52</td>
+                </tr>
+                <tr>
+                    <td>副手</td>
+                    <td>爆擊</td>
+                    <td>29</td>
+                    <td>42</td>
+                    <td>57</td>
+                </tr>
+                <tr>
+                    <td>衣褲</td>
+                    <td>爆擊抵抗</td>
+                    <td>15</td>
+                    <td>24</td>
+                    <td>39</td>
+                </tr>
+                <tr>
+                    <td>手套</td>
+                    <td>命中</td>
+                    <td>22</td>
+                    <td>32</td>
+                    <td>44</td>
+                </tr>
+                <tr>
+                    <td>鞋子</td>
+                    <td>迴避</td>
+                    <td>17</td>
+                    <td>24</td>
+                    <td>32</td>
+                </tr>
+            </table>
+            <h3 id="closeta" style="display:none">收起表格</h3>
+        </div>
+
+        <div align="center">
+            <h2 id="rank">練等攻略</h2>
+            <h3 id="ooo" style="display:none">等級1~50<h3>
+          <ul id="ooocon" style="display:none">
+            <li>
+              你可以存一些Lv3的經驗卡然後用農的升等，因為你可能會在50副本找不到隊伍隨機匹配
+            </li>
+            <li>
+              泰內花園
+            </li>
+          </ul>
+          <h3 id="two" style="display:none">等級50~90</h3>
+            <ul id="twocon" style="display:none">
+                <li>
+                    打50副本(入口在泰內花園)
+                </li>
+                <li>
+                    解完[柯拉佩達]與[歐勒夏]區域的任務
+                </li>
+            </ul>
+            <h3 id="three" style="display:none">等級90~100</h3>
+            <ul id="threecon" style="display:none">
+                <li>
+                    打90副本(入口在澤凱瑞爾岔路)
+                </li>
+            </ul>
+            <h3 id="four" style="display:none">等級100</h3>
+            <ul id="fourcon" style="display:none">
+                <li>
+                    恭喜你從現在開始可打100等的副本(俗稱傭兵副本)
+                </li>
+                <li>
+                    傭兵副本跟其他副本分開計算次數，所以放心地每天把3次打完，再把每天的一般副本次數也打完。
+                </li>
+            </ul>
+            <h3 id="closerank" style="display:none">收起攻略</h3>
+        </div>
+
+        <div>
+            <h3 style="text-align:right;">
+              <img src="images/person.gif" id="mm">
+              以上資料由天野幻境、巴哈姆特提供~
+            </h3>
+        </div>
+
+    </section>
+</body>
+
+</html>
