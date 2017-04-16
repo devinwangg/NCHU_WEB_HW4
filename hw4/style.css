@@ -1,0 +1,292 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-color: #ccfffa;
+	margin: 0px;
+}
+
+
+#wrapper {
+	width: 900px;
+	margin: auto;
+	border: 2px solid #d3d8e5;
+        }
+
+#header {
+	background-image: url(pic/cover.jpg);
+	background-repeat: no-repeat;
+	height: 400px;
+	width: 900px;
+        }
+
+.tabs {
+	/*高度設定*/
+	height: 25px;
+
+	/*文字設定*/
+	font-weight: bolder;
+	color: #FFF;
+	font-size: 14px;
+	font-family:cursive;
+
+	/*背景色設定*/
+    background-color:#dbd4d4;
+
+	/*將內定的邊距清除*/
+	margin: 0px;
+
+	/*將內定的內距清除*/
+	padding:0px;
+        }
+
+.tabs li {
+	/* 讓各個清單元素靠左對齊 */
+	float: left;
+	/* 設定清單文字範圍的寬度 */
+	width: 178px;
+	/* 去除清單文字前面的小點*/
+	list-style-type: none;
+	/* 設定背景色 */
+	background-color: #000089;
+	/* 讓清單文字居中對齊 */
+	text-align: center;
+	/* 設定字距為2px */
+	letter-spacing: 2px;
+	/* 設定左邊的白邊樣式 */
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #FFF;
+	/* 右邊留白1像素 */
+	margin-right: 1px;
+
+}
+
+.tabs li a {
+	/* 連結範圍充滿整個區塊 */
+    display: block;
+
+	/* 單個連結範圍的框度和高度*/
+	width: 180px;
+	height:20px;
+
+    /* 連結範圍向上的內距 */
+	padding-top:2px;
+
+	/* 連結的文字設為白色以及無裝飾(無底線) */
+	color: #FFF;
+	text-decoration: none;
+}
+
+.tabs li a:hover{
+	/* 設定滑鼠移過時，清單改變的底色設定 */
+	background-color:#cceeff;
+}
+
+
+#index {
+	font-family:cursive;
+	background-color: #f7fcff;
+	padding: 40px;
+	font-size: 15px;
+	line-height: 22px;
+	color: #000089;
+
+                }
+
+
+
+h1{
+	color: #666;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 16px;
+	margin: 0px;
+}
+
+
+.header-text {
+	font-size: 15px;
+	color: #999999;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: inherit;
+	font-style: normal;
+	margin: 0px;
+}
+.button{
+	border-bottom-width: 3px;
+	border-left-width: 9px;
+	border-bottom-style: solid;
+	border-left-style: dotted;
+	border-bottom-color: #000089;
+	border-left-color: #000089;
+	font-size: 140%;
+	color: #000089;
+	padding-left: 5px;
+}
+#hide{
+	border-bottom-width: 3px;
+	border-left-width: 9px;
+	border-bottom-style: solid;
+	border-left-style: dotted;
+	border-bottom-color: #000089;
+	border-left-color: #000089;
+	font-size: 140%;
+	color: #000089;
+	padding-left: 5px;
+}
+
+
+.arttext{
+	font-size: 12px;
+	color: #333;
+	line-height: 18px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #615F84;
+	padding: 1px;
+}
+
+.iconstyle {
+	cursor: pointer;
+	color: #000089;
+	border-bottom-color: #000089;
+}
+
+h4 {
+	font-size: 14px;
+	font-weight: bolder;
+	color: #FFFFCC;
+	border-left-width: 5px;
+	border-left-style: dashed;
+	border-left-color: #FFFFCC;
+
+
+
+.floatleft {
+	padding: 20px;
+	float: left;
+}
+.floatleft {
+	padding: 20px;
+	float: left;
+}
+
+
+
+.tabs li {
+		display: inline;
+		font-size: 25pt;
+		border-style: groove;
+		background-color: white;
+		background: rgba(255, 255, 255, 0.5);
+		border-radius: 25px;
+}
+
+a{
+	text-decoration: none;
+	padding: 15px;
+}
+
+.tabs {
+		margin-top: 50px;
+		text-align: center;
+		font-weight:bold;
+}
+
+.tabs li:hover {
+		font-size: 30pt;
+		background-color: white;
+}
+#charintroPic{
+		 display: none;
+	 }
+
+	 #girl{
+		 background-color:#FFAC12;
+		 color:#FFFF26;
+	 }
+	 #boy{
+		 background-color:#F400F7;
+		 color:#FFC9FF;
+	 }
+
+	 #ALL,#Exc{
+		 background-color:#000000;
+		 color:#FFFFFF;
+	 }
+	 .rankbutton{
+		 margin:3px;
+		 padding: 15px 15px;
+		 text-align: center;
+		 font-size: 16px;
+		 border-radius: 100px;
+	 }
+	 .Girl,.Boy,.cha {
+			 margin: 10px;
+			 opacity: 0.5;
+	 }
+	 .vid{
+		 margin: auto;
+	 }
+	 .frame{
+		 display: block;
+		 margin: auto;
+		 display:none;
+	 }
+	 .vidb{
+		 margin: 10px;
+		 font-size: 15pt;
+	 }
+	 p{
+		 font-size: 21px;
+		 font-weight: bold;
+		 color: white;
+	 }
+
+
+html {
+		background: url(back.jpg) no-repeat center center fixed;
+		background-size: cover;
+}
+.tabs li {
+        display: inline;
+        font-size: 25pt;
+        border-style: groove;
+        background-color: white;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 25px;
+    }
+
+    a{
+      text-decoration: none;
+      padding: 15px;
+    }
+
+    .tabs {
+        margin-top: 50px;
+        text-align: center;
+        font-weight:bold;
+    }
+
+    .tabs li:hover {
+        font-size: 30pt;
+        background-color: white;
+    }
+
+    div.pane {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        background-color: lightgrey;
+        margin-left: auto;
+        margin-right: auto;
+        height: 1100px;
+        width: 800px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    html {
+        background: url(back.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    
